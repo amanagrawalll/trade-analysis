@@ -9,17 +9,6 @@ logger = logging.getLogger(__name__)
 
 
 def add_indicators(df: pd.DataFrame, rsi_period: int = 14, ma_periods: List[int] = [20, 50]) -> pd.DataFrame:
-    """
-    Add RSI, MACD, and moving averages to DataFrame.
-
-    Parameters:
-        df (pd.DataFrame): OHLCV DataFrame.
-        rsi_period (int): RSI window (default: 14).
-        ma_periods (List[int]): Moving average windows (default: [20, 50]).
-
-    Returns:
-        pd.DataFrame: DataFrame with indicators added.
-    """
     df = df.copy()
 
     try:
@@ -46,3 +35,4 @@ def add_indicators(df: pd.DataFrame, rsi_period: int = 14, ma_periods: List[int]
     df.dropna(inplace=True)
 
     return df
+
