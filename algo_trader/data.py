@@ -11,22 +11,10 @@ DEFAULT_PERIOD_DAYS = 365  # 1 year
 
 
 def normalize_ticker(ticker: str) -> str:
-    """Ensure .NS is appended for NSE tickers."""
     return ticker if ticker.endswith(".NS") else f"{ticker}.NS"
 
 
 def fetch_data(tickers: List[str], period_days: int = DEFAULT_PERIOD_DAYS, interval: str = "1d") -> Dict[str, pd.DataFrame]:
-    """
-    Fetch historical stock data for given tickers using yfinance.
-
-    Parameters:
-        tickers (List[str]): Ticker symbols (NSE should end with .NS).
-        period_days (int): Number of past days to retrieve. Default = 365.
-        interval (str): Interval string for data (e.g., "1d", "1h"). Default = "1d".
-
-    Returns:
-        Dict[str, pd.DataFrame]: Mapping from ticker to OHLCV DataFrame.
-    """
     end_date = datetime.today()
     start_date = end_date - timedelta(days=period_days)
 
@@ -63,3 +51,4 @@ def fetch_data(tickers: List[str], period_days: int = DEFAULT_PERIOD_DAYS, inter
         raise ValueError("No data fetched for any ticker.")
 
     return all_data
+
