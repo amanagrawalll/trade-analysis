@@ -1,0 +1,48 @@
+2025-08-07 23:04:53,888 - algo_trader.data - INFO - Fetching data for tickers ['RELIANCE.NS', 'TCS.NS', 'HDFCBANK.NS', 'ITC.NS', 'ICICIBANK.NS', 'SBIN.NS', 'LT.NS', 'MARUTI'] from 2025-02-08 to 2025-08-07
+2025-08-07 23:04:54,604 - algo_trader.data - INFO - Fetched 122 rows for RELIANCE.NS
+2025-08-07 23:04:54,952 - algo_trader.data - INFO - Fetched 122 rows for TCS.NS
+2025-08-07 23:04:55,232 - algo_trader.data - INFO - Fetched 122 rows for HDFCBANK.NS
+2025-08-07 23:04:55,551 - algo_trader.data - INFO - Fetched 122 rows for ITC.NS
+2025-08-07 23:04:55,831 - algo_trader.data - INFO - Fetched 122 rows for ICICIBANK.NS
+2025-08-07 23:04:56,120 - algo_trader.data - INFO - Fetched 122 rows for SBIN.NS
+2025-08-07 23:04:56,384 - algo_trader.data - INFO - Fetched 122 rows for LT.NS
+2025-08-07 23:04:57,601 - yfinance - ERROR - HTTP Error 404: 
+2025-08-07 23:04:57,866 - yfinance - ERROR - 
+1 Failed download:
+2025-08-07 23:04:57,866 - yfinance - ERROR - ['MARUTI']: YFTzMissingError('possibly delisted; no timezone found')
+2025-08-07 23:04:57,871 - algo_trader.data - WARNING - No data returned for MARUTI
+2025-08-07 23:04:57,871 - algo_trader.backtester - INFO - Backtesting RELIANCE.NS
+2025-08-07 23:04:57,887 - algo_trader.backtester - INFO - Total PnL for RELIANCE.NS: -2.90
+2025-08-07 23:04:57,888 - algo_trader.backtester - INFO - Backtesting TCS.NS
+2025-08-07 23:04:57,905 - algo_trader.backtester - INFO - Total PnL for TCS.NS: 0.00
+2025-08-07 23:04:57,905 - algo_trader.backtester - INFO - Backtesting HDFCBANK.NS
+2025-08-07 23:04:57,924 - algo_trader.backtester - INFO - Total PnL for HDFCBANK.NS: 0.00
+2025-08-07 23:04:57,924 - algo_trader.backtester - INFO - Backtesting ITC.NS
+2025-08-07 23:04:57,941 - algo_trader.backtester - INFO - Total PnL for ITC.NS: 0.00
+2025-08-07 23:04:57,941 - algo_trader.backtester - INFO - Backtesting ICICIBANK.NS
+2025-08-07 23:04:57,953 - algo_trader.backtester - INFO - Total PnL for ICICIBANK.NS: 0.00
+2025-08-07 23:04:57,953 - algo_trader.backtester - INFO - Backtesting SBIN.NS
+2025-08-07 23:04:57,961 - algo_trader.backtester - INFO - Total PnL for SBIN.NS: 0.00
+2025-08-07 23:04:57,961 - algo_trader.backtester - INFO - Backtesting LT.NS
+2025-08-07 23:04:57,968 - algo_trader.backtester - INFO - Total PnL for LT.NS: 0.00
+2025-08-07 23:04:58,051 - algo_trader.ml_model - INFO - Accuracy for RELIANCE.NS: 36.36%
+2025-08-07 23:04:58,122 - algo_trader.ml_model - INFO - Accuracy for TCS.NS: 22.73%
+2025-08-07 23:04:58,194 - algo_trader.ml_model - INFO - Accuracy for HDFCBANK.NS: 54.55%
+2025-08-07 23:04:58,284 - algo_trader.ml_model - INFO - Accuracy for ITC.NS: 54.55%
+2025-08-07 23:04:58,325 - algo_trader.ml_model - INFO - Accuracy for ICICIBANK.NS: 68.18%
+2025-08-07 23:04:58,375 - algo_trader.ml_model - INFO - Accuracy for SBIN.NS: 54.55%
+2025-08-07 23:04:58,441 - algo_trader.ml_model - INFO - Accuracy for LT.NS: 27.27%
+2025-08-07 23:04:58,442 - root - INFO - ML Accuracies: {'RELIANCE.NS': 0.36363636363636365, 'TCS.NS': 0.22727272727272727, 'HDFCBANK.NS': 0.5454545454545454, 'ITC.NS': 0.5454545454545454, 'ICICIBANK.NS': 0.6818181818181818, 'SBIN.NS': 0.5454545454545454, 'LT.NS': 0.2727272727272727}
+2025-08-07 23:05:01,137 - algo_trader.google_sheets - INFO - Connected to Google Sheets: My Algo Trade Log
+2025-08-07 23:05:04,153 - algo_trader.google_sheets - INFO - Wrote 9 rows to sheet Summary_PnL
+2025-08-07 23:05:05,770 - algo_trader.google_sheets - INFO - Wrote 2 rows to sheet Trades_RELIANCE.NS
+2025-08-07 23:05:07,355 - algo_trader.google_sheets - INFO - Wrote 0 rows to sheet Trades_TCS.NS
+2025-08-07 23:05:09,006 - algo_trader.google_sheets - INFO - Wrote 0 rows to sheet Trades_HDFCBANK.NS
+2025-08-07 23:05:10,587 - algo_trader.google_sheets - INFO - Wrote 0 rows to sheet Trades_ITC.NS
+2025-08-07 23:05:12,138 - algo_trader.google_sheets - INFO - Wrote 0 rows to sheet Trades_ICICIBANK.NS
+2025-08-07 23:05:13,653 - algo_trader.google_sheets - INFO - Wrote 0 rows to sheet Trades_SBIN.NS
+2025-08-07 23:05:15,180 - algo_trader.google_sheets - INFO - Wrote 0 rows to sheet Trades_LT.NS
+Total PnL: -2.9000244140625
+Per Ticker PnL: {'RELIANCE.NS': np.float64(-2.9000244140625), 'TCS.NS': np.float64(0.0), 'HDFCBANK.NS': np.float64(0.0), 'ITC.NS': np.float64(0.0), 'ICICIBANK.NS': np.float64(0.0), 'SBIN.NS': np.float64(0.0), 'LT.NS': np.float64(0.0)}
+ML Accuracies: {'RELIANCE.NS': 0.36363636363636365, 'TCS.NS': 0.22727272727272727, 'HDFCBANK.NS': 0.5454545454545454, 'ITC.NS': 0.5454545454545454, 'ICICIBANK.NS': 0.6818181818181818, 'SBIN.NS': 0.5454545454545454, 'LT.NS': 0.2727272727272727}
+2025-08-07 23:05:16,740 - algo_trader.telegram_alerts - INFO - Sent Telegram alert (300 chars)
