@@ -9,10 +9,6 @@ logger = logging.getLogger(__name__)
 
 
 def send_message(message: str, parse_mode: str = "Markdown") -> Optional[str]:
-    """Send a message via Telegram bot.
-
-    Returns response text on success or None if disabled/failed.
-    """
     token = os.getenv("TELEGRAM_BOT_TOKEN")
     chat_id = os.getenv("TELEGRAM_CHAT_ID")
 
@@ -36,3 +32,4 @@ def send_message(message: str, parse_mode: str = "Markdown") -> Optional[str]:
     except Exception as exc:
         logger.exception("Failed to send Telegram alert: %s", exc)
         return None
+
