@@ -1,7 +1,4 @@
-"""Google Sheets integration utility.
-
-Requires service account JSON credentials path specified via environment variable `GOOGLE_SERVICE_ACCOUNT_FILE`.
-"""
+"""Google Sheets integration utility."""
 import logging
 import os
 from typing import Dict
@@ -27,7 +24,6 @@ class GoogleSheetsClient:
         logger.info("Connected to Google Sheets: %s", spreadsheet_name)
 
     def write_df(self, df: pd.DataFrame, worksheet_name: str):
-        """Write DataFrame to specified worksheet (tab), replacing existing content."""
         try:
             try:
                 worksheet = self.spreadsheet.worksheet(worksheet_name)
@@ -47,4 +43,5 @@ class GoogleSheetsClient:
 
         self.write_df(summary_df, "Summary_PnL")
         for ticker, df in trades.items():
+
             self.write_df(df, f"Trades_{ticker}")
