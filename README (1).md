@@ -74,7 +74,7 @@ pip install -r requirements.txt
 - Place the `.json` credentials file in the root directory
 - Set the environment variable in `.env`:
 ```env
-GOOGLE_APPLICATION_CREDENTIALS=your_credentials.json
+set GOOGLE_APPLICATION_CREDENTIALS=your_credentials.json
 ```
 
 ### 💬 3. Setup Telegram Alerts (Optional)
@@ -83,8 +83,8 @@ GOOGLE_APPLICATION_CREDENTIALS=your_credentials.json
 - Add to `.env`:
 
 ```env
-TELEGRAM_BOT_TOKEN=your_bot_token
-TELEGRAM_CHAT_ID=your_chat_id
+set TELEGRAM_BOT_TOKEN=your_bot_token
+set TELEGRAM_CHAT_ID=your_chat_id
 ```
 
 ### ▶️ 4. Run the Algo
